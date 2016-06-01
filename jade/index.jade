@@ -9,7 +9,7 @@ html(lang='ru')
             .base
                 div.main_content
                     // Гарантия
-                    #section_1.section.section_bg1.sectionBS.uHolder
+                    #section_1.section.section_bg1.sectionBS.full_h_section.uHolder
                         img.imgBS.hide(src='i/garant/section_1_nu.jpg')
                         .section_inner
                             h3.section_title
@@ -33,7 +33,12 @@ html(lang='ru')
                                         h3 Онлайн
                                         p Подписание документов с помощью электронно-цифровой подписи
 
-                            .order_form
+                            .order_form(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            )
                                 form(action='#')
                                     .form_row.f_cell_v1
                                         .form_cell
@@ -44,20 +49,31 @@ html(lang='ru')
                                         .form_cell
                                             button.btn_v2.get_guarantee_btn.blue_btn(): span Получить гарантию
                         .u_holder: .u_field: .uBlock.u_block
-                            svg(width="746px" height="861px" viewBox="0 0 746 861")
-                                | <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.211345616">
-                                <path d="M248.4375,0 L0,0 L0,544.335938 C0,737.109375 149.414062,860.15625 372.65625,860.15625 C595.898438,860.15625 745.3125,737.109375 745.3125,544.335938 L745.3125,0 L496.875,0 L496.875,516.796875 C496.875,605.859375 452.929687,654.492188 372.65625,654.492188 C292.382812,654.492188 248.4375,605.859375 248.4375,516.796875 L248.4375,0 Z" id="U" fill="#7F95B1"></path>
-                                </g>
-
+                            svg(width="1383px" height="730px" viewBox="0 0 1383 730")
+                                | <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+                                |       <path d="M682.867188,417.195312 L682.867188,324.421875 L376.226562,324.421875 L376.226562,462.117188 L483.648438,462.117188 L482.671875,471.882812 C476.8125,528.523438 428.960937,566.121094 361.578125,566.121094 C270.757812,566.121094 211.675781,489.460938 211.675781,361.042969 C211.675781,235.554688 263.433594,163.289062 351.324219,163.289062 C410.894531,163.289062 457.28125,196.980469 470.953125,248.738281 L674.566406,248.738281 C658.941406,104.207031 527.105469,0.203125 350.347656,0.203125 C133.0625,0.203125 0.73828125,133.015625 0.73828125,363.972656 C0.73828125,597.859375 133.0625,729.207031 356.695312,729.207031 C561.285156,729.207031 682.867188,610.066406 682.867188,417.195312 L682.867188,417.195312 Z M971.929688,165.242188 L1057.86719,165.242188 C1113.53125,165.242188 1151.12891,202.839844 1151.12891,255.085938 C1151.12891,308.308594 1115.48438,343.953125 1057.37891,343.953125 L971.929688,343.953125 L971.929688,165.242188 Z M971.929688,480.671875 L1039.80078,480.671875 L1151.12891,717 L1382.57422,717 L1248.78516,449.910156 C1322.51562,414.753906 1362.55469,334.675781 1362.55469,251.667969 C1362.55469,100.789062 1265.875,12.4101562 1077.88672,12.4101562 L764.898438,12.4101562 L764.898438,717 L971.929688,717 L971.929688,480.671875 Z" id="GR" fill="#4F6B8C"></path>
+                                |   </g>
                     
                     // Рассчет
-                    #section_2.section.section_bg2.clr_white
+                    #section_2.section.section_bg2.clr_white.full_h_section
                         .section_inner
-                            h3.section_title Давайте посчитаем <br> вашу гарантию
+                            h3.section_title(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            ) Давайте посчитаем
+                                span.high_only <br> 
+                                | вашу гарантию
 
                             .guarantee_form
                                 form(action='#')
-                                    .calc_block
+                                    .calc_block(
+                                    data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                    data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                                    data-0-top='transform: translate(0%,0%); opacity: 1;'
+                                    data--40p-top='transform: translate(0%,-30%); opacity: 0;'
+                                    )
                                         .form_row.f_cell_v1
                                             label.f_label_v1(for='order_sum') СУММА
 
@@ -104,33 +120,48 @@ html(lang='ru')
                                                     
 
 
-                                    .result_block: .result_block_inner
-                                        .result_b_title Ваша гарантия
-
-                                        .result_b_val 1,433,490
-                                        .result_b_label КОМИССИЯ
-
-                                        .result_b_val 22%
-                                        .result_b_label ГОДОВЫХ
-
-                                        .result_b_val 12 месяцев
-                                        .result_b_label СРОК ГАРАНТИИ
-
-                                        .result_b_controls
-                                            a.btn_v2.white_btn.result_order_btn(href='#'): span Начать оформление
-
-                                            p Приведенные расчеты стоимости банковской гарантии являются предварительными и не являются публичной офертой
+                                    .result_block(
+                                    data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                    data-75p-top='transform: translate(0%,0%); opacity: 1;'
+                                    data-0-top='transform: translate(0%,0%); opacity: 1;'
+                                    data--40p-top='transform: translate(0%,-30%); opacity: 0;'
+                                    )
+                                        
+                                        .result_block_inner
+                                            .result_b_title Ваша гарантия
+    
+                                            .result_b_val 1,433,490
+                                            .result_b_label КОМИССИЯ
+    
+                                            .result_b_val 22%
+                                            .result_b_label ГОДОВЫХ
+    
+                                            .result_b_val 12 месяцев
+                                            .result_b_label СРОК ГАРАНТИИ
+    
+                                            .result_b_controls
+                                                a.btn_v2.white_btn.result_order_btn(href='#'): span Начать оформление
+    
+                                                p Приведенные расчеты стоимости банковской гарантии являются предварительными и не являются публичной офертой
                                             
                     
                     
                     // Оформление
-                    #section_3.section.section_bg3.clr_white.sectionBS
+                    #section_3.section.section_bg3.clr_white.sectionBS.full_h_section
                         img.imgBS.hide(src='i/garant/section_2.jpg')                        
                         .section_inner
-                            h3.section_title Получение гарантии <br> без визита в офис
+                            h3.section_title(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            ) Получение гарантии <br> без визита в офис
                             
                             ul.service_benefits.lines_mode
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .benefit_item
                                         .no_visit_icon
                                             svg(width="40px" height="54px" viewBox="0 0 40 54")
@@ -143,7 +174,10 @@ html(lang='ru')
                                                 </g>
                                         h3 Заявка и документы
                                         p Регистрируйтесь, загружайте сканы документов и отправляйте заявку на рассмотрение
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-73p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .benefit_item
                                         .no_visit_icon
                                             svg(width="51px" height="50px" viewBox="0 0 51 50")
@@ -157,7 +191,10 @@ html(lang='ru')
                                         h3 Одобрение заявки
                                         p Мы рассмотрим все документы и вышлем решение на почту и уведомим по телефону в течении трех рабочих дней
 
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-76p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .benefit_item
                                         .no_visit_icon
                                             svg(width="53px" height="37px" viewBox="0 0 53 37")
@@ -174,10 +211,18 @@ html(lang='ru')
                     //Лучшие стороны
                     #section_4.section.section_bg4.clr_white
                         .section_inner
-                            h3.section_title Минимальный пакет <br>документов
+                            h3.section_title(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            ) Минимальный пакет <br>документов
                             
                             .doc_list
-                                li 
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-76p-top='transform: translate(0%,0%); opacity: 1;'
+                                ) 
                                     .docs_block
                                         .docs_caption.clr_blue ОСНОВНЫЕ
                                         ul
@@ -186,7 +231,10 @@ html(lang='ru')
                                             li Бухгалтерская отчетность 
                                             li Паспорт руководителя
                             
-                                li 
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-73p-top='transform: translate(0%,0%); opacity: 1;'
+                                ) 
                                     .docs_block
                                         .docs_caption.clr_gray_2 ДОПОЛНИТЕЛЬНЫЕ
                                         ul
@@ -194,17 +242,28 @@ html(lang='ru')
                                             li Доверенность 
                                             li Банковские гарантии
                                             li Страховка
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .docs_block
                                         p Полный список документов вам будет предложен во время заполнения заявки на гарантию
                                         
                     // в хорошей компании
                     .section.section_bg5.clr_gray
                         .section_inner
-                            h3.section_title Вы в хорошей компании
+                            h3.section_title(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            ) Вы в хорошей компании
                             
                             ul.company_features
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .feature_item
                                         .feature_icon
                                             svg(width="78px" height="50px" viewBox="0 0 78 50")
@@ -219,7 +278,10 @@ html(lang='ru')
                                         .feature_caption Надежность банка
                                         p Нашему банку доверяют 100 000 клиентов по всей России.
                                         
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-73p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .feature_item
                                         .feature_icon
                                             svg(width="63px" height="64px" viewBox="0 0 63 64")
@@ -240,7 +302,10 @@ html(lang='ru')
                                         .feature_caption Онлайн сервисы
                                         p Создаем удобные и быстрые сервисы для работы с банком через интернет.
                                         
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-76p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .feature_item
                                         .feature_icon
                                             svg(width="73px" height="65px" viewBox="0 0 73 65")
@@ -259,7 +324,10 @@ html(lang='ru')
                                         .feature_caption Выгодные условия
                                         p Мы сотрудничем с лучшими банками и компаниями, чтобы предоставлять выгодные тарифы.
                                         
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-79p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .feature_item
                                         .feature_icon
                                             svg(width="57px" height="66px" viewBox="0 0 57 66")
@@ -280,30 +348,47 @@ html(lang='ru')
                                         .feature_caption Поддержка 24/7
                                         p Решаем вопросы быстро, доступны всегда по телефону 8&nbsp;800&nbsp;333&nbsp;04&nbsp;04
                                         
-                            .text_center.docs_caption.clr_gray_3 НАДЕЖНЫЕ ПАРТНЕРЫ
+                            .text_center.docs_caption.clr_gray_3(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            ) НАДЕЖНЫЕ ПАРТНЕРЫ
                             ul.partner_list
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-79p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .partner_item
                                         .partner_img
                                             img.retina_only(src='i/garant/logo1@2x.png' width=172 height=47)
                                             img.no_retina(src='i/garant/logo1.png' width=172 height=47)
                                         //+partner_1()
                                         
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-76p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .partner_item
                                         .partner_img
                                             img.retina_only(src='i/garant/logo2@2x.png' width=172 height=47)
                                             img.no_retina(src='i/garant/logo2.png' width=172 height=47)
                                         //+partner_2()
                                         
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-73p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .partner_item
                                         .partner_img
                                             img.retina_only(src='i/garant/logo3@2x.png' width=155 height=41)
                                             img.no_retina(src='i/garant/logo3.png' width=155 height=41)
                                         //+partner_3()
                                         
-                                li
+                                li(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                                )
                                     .partner_item
                                         .partner_img
                                             img.retina_only(src='i/garant/logo4@2x.png' width=158 height=46)
@@ -315,15 +400,35 @@ html(lang='ru')
                         img.imgBS.hide(src='i/garant/section_3.jpg')
                         .section_inner
                             .create_agent_block
-                                h3.section_title Интересно сотрудничество в&nbsp;качестве агента? Заполните анкету или позвоните нам
-                                .create_agent_controls
+                                h3.section_title(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                                data-0-top='transform: translate(0%,0%); opacity: 1;'
+                                data--10p-top='transform: translate(0%,-30%); opacity: 0;'
+                                ) Интересно сотрудничество в&nbsp;качестве агента? Заполните анкету или позвоните нам
+                                .create_agent_controls(
+                                data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                                data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                                data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                                data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                                )
                                     a.btn_v2.blue_btn.agent_btn.agentFormOpen(href='#'): span Стать агентом
                                                                                     
                     // Опыт клиентов
-                    #section_6.section.section_bg7.clr_white
+                    #section_6.section.section_bg7.clr_white.full_h_section
                         .section_inner
-                            h3.section_title.text_center Опыт наших клиентов
-                            .clientsReviewSlider.review_slider.slider_btn_v1
+                            h3.section_title.text_center(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            ) Опыт наших клиентов
+                            .clientsReviewSlider.review_slider.slider_btn_v1(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,0%); opacity: 1;'
+                            data--20p-top='transform: translate(0%,-30%); opacity: 0;'
+                            )
                                 +loop_while(2)
                                     .slide
                                         .review_item
@@ -335,7 +440,12 @@ html(lang='ru')
                                         .review_item
                                             p Стать агентом банка это один из наиболее эффективных и надежных способов обеспечения исполнения обязательств, обеспечение заявки на участие в конкурсе, обеспечение исполнения контракта. 33
                                         
-                            .clientsReviewAuthors.author_slider
+                            .clientsReviewAuthors.author_slider(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            )
                                 +loop_while(6)
                                     .slide
                                         .author_item
@@ -348,8 +458,18 @@ html(lang='ru')
                     #section_7.section.section_bg8.clr_gray.sectionBS
                         img.imgBS.hide(src='i/garant/section_4.jpg')
                         .section_inner
-                            h3.section_title.text_center Получите гарантию
-                            .text_center: .order_form.center_mod
+                            h3.section_title.text_center(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            ) Получите гарантию
+                            .text_center: .order_form.center_mod(
+                            data-100p-top='transform: translate(0%,200%); opacity: 0;'
+                            data-70p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-10p-top='transform: translate(0%,0%); opacity: 1;'
+                            data-0-top='transform: translate(0%,-30%); opacity: 0;'
+                            )
                                 form(action='#')
                                     .form_row.f_cell_v1
                                         .form_cell

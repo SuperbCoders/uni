@@ -20,7 +20,10 @@ module.exports = function(grunt){
 		sass   : {
 			dist: {
 				options: {
-					style: 'expanded'
+					style: 'expanded',
+					sourcemap: 'none',
+					//compass: true,
+					noCache: true
 				},
 				files  : {
 					'styles/main_global.css': 'sass/main_global.scss'

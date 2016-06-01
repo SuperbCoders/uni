@@ -1,3 +1,4 @@
+$icon-rub: "\e907";
 $icon-ok: "\e905";
 $icon-wrong: "\e906";
 $icon-close: "\e900";
@@ -22,6 +23,12 @@ $icon-vk: "\e904";
     -moz-osx-font-smoothing: grayscale;
   }
 
+}
+
+.icon-rub {
+  &:before {
+    content: $icon-rub;
+  }
 }
 
 .icon-ok {

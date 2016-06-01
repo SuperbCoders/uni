@@ -1,4 +1,4 @@
-var $html, $header, $doc, $browserWindow, $order_form, $restore_form, $auth_form, $restore_complete_form, $callback_form, $callback_complete_form, $news_form;
+var $html, $header, $doc, $browserWindow, $order_form, $restore_form, $auth_form, $restore_complete_form, $callback_form, $callback_complete_form, $news_form, $skrollr;
 
 $(function ($) {
     $html = $('html');
@@ -90,7 +90,30 @@ $(window).on("backstretch.after", function (e, instance, index) {
     instance.$container.css('minHeight', instance.$img[0].clientHeight);
 }).on('scroll', function () {
     $header.toggleClass('header_fixed', !!$doc.scrollTop());
+}).on('resize', function () {
+    initSkrollr();
+}).load(function () {
+    initSkrollr();
 });
+
+function initSkrollr() {
+
+    console.log($browserWindow.width() > 1200, $browserWindow.height() > 800);
+    
+    if ($browserWindow.width() > 1200 && $browserWindow.height() > 800) {
+        console.log(!$skrollr);
+        
+        if (!$skrollr) {
+            $skrollr = skrollr.init({forceHeight: false});
+        }
+    } else {
+        console.log($skrollr);
+
+        if ($skrollr) {
+            $skrollr.destroy();
+        }
+    }
+}
 
 function formInit() {
 

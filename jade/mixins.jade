@@ -1,4 +1,4 @@
-mixin dev_head(page_title, garant, factor, leasing)
+mixin dev_head(page_title, garant, factor, leasing, account)
     head
         title=page_title
         | <!-- saved from url=(0014)about:internet -->
@@ -29,7 +29,7 @@ mixin dev_head(page_title, garant, factor, leasing)
             <meta name="msapplication-TileColor" content="#ffffff">
             <meta name="msapplication-TileImage" content="mstile-144x144.png">
             <meta name="msapplication-config" content="ico_ft/browserconfig.xml">
-        - if (leasing)
+        - else if (leasing)
             | <link rel="shortcut icon" href="ico_ls/favicon.ico">
             <link rel="apple-touch-icon" sizes="57x57" href="ico_ls/apple-touch-icon-57x57.png">
             <link rel="apple-touch-icon" sizes="114x114" href="ico_ls/apple-touch-icon-114x114.png">
@@ -49,6 +49,26 @@ mixin dev_head(page_title, garant, factor, leasing)
             <meta name="msapplication-TileColor" content="#ffffff">
             <meta name="msapplication-TileImage" content="mstile-144x144.png">
             <meta name="msapplication-config" content="ico_ls/browserconfig.xml">
+        - else if (account)
+            | <link rel="shortcut icon" href="ico_ac/favicon.ico">
+            <link rel="apple-touch-icon" sizes="57x57" href="ico_ac/apple-touch-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="ico_ac/apple-touch-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="ico_ac/apple-touch-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="ico_ac/apple-touch-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="60x60" href="ico_ac/apple-touch-icon-60x60.png">
+            <link rel="apple-touch-icon" sizes="120x120" href="ico_ac/apple-touch-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="76x76" href="ico_ac/apple-touch-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="152x152" href="ico_ac/apple-touch-icon-152x152.png">
+            <link rel="apple-touch-icon" sizes="180x180" href="ico_ac/apple-touch-icon-180x180.png">
+            <link rel="icon" type="image/png" href="ico_ac/favicon-192x192.png" sizes="192x192">
+            <link rel="icon" type="image/png" href="ico_ac/favicon-160x160.png" sizes="160x160">
+            <link rel="icon" type="image/png" href="ico_ac/favicon-96x96.png" sizes="96x96">
+            <link rel="icon" type="image/png" href="ico_ac/favicon-16x16.png" sizes="16x16">
+            <link rel="icon" type="image/png" href="ico_ac/favicon-32x32.png" sizes="32x32">
+            <link rel="manifest" href="ico_ac/manifest.json">
+            <meta name="msapplication-TileColor" content="#ffffff">
+            <meta name="msapplication-TileImage" content="mstile-144x144.png">
+            <meta name="msapplication-config" content="ico_ac/browserconfig.xml">
         - else
             | <link rel="shortcut icon" href="ico/favicon.ico">
             <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-touch-icon-57x57.png">
@@ -73,6 +93,7 @@ mixin dev_head(page_title, garant, factor, leasing)
         script(src='js/jquery-ui-1.10.2.custom.min.js')
         script(src='js/jquery.backstretch.min.js')
         script(src='js/jquery.inputmask.bundle.min.js')
+        script(src='js/skrollr.js')
         //script(src='js/inputmask.js')
         //script(src='js/inputmask.extensions.js')
         //script(src='js/jquery.inputmask.js')
@@ -89,6 +110,8 @@ mixin dev_head(page_title, garant, factor, leasing)
         - if (garant)
             script(src='js/garant.js')
         - if (factor)
+            script(src='js/factor.js')
+        - if (account)
             script(src='js/factor.js')
         - if (leasing)
             //script(src='js/jquery-ui-1.10.2.custom.min.js')
@@ -233,11 +256,11 @@ mixin popups()
             
             
             
-mixin header(cls, garant ,factor, leasing)
+mixin header(cls, garant ,factor, leasing, account)
     .header(class=cls)
         .top_menu
             .fr.auth_block: .mb
-                a.btn_v1.login_btn.authFormOpen(href='#' class= (factor || leasing ? 'green_btn_bdr' : 'blue_btn_bdr')) Вход
+                a.btn_v1.login_btn.authFormOpen(href='#' class= (factor || leasing ? 'green_btn_bdr' : 'blue_btn_bdr') class= account ? 'blue_btn_bdr_v3' : '') Вход
             .fl
                 .mb
                     .main_m_control
@@ -254,16 +277,20 @@ mixin header(cls, garant ,factor, leasing)
                                 img.logo_dark(src='svg/leasing/darklogo.svg' )
                                 //-img.logo_dark(src='svg/factor/whitelogo.svg')
                                 img.logo_white(src='svg/leasing/whitelogo.svg')
+                            - else if (account)
+                                img.logo_dark(src='svg/account/black.svg' )
+                                //-img.logo_dark(src='svg/factor/whitelogo.svg')
+                                img.logo_white(src='svg/account/white.svg')
                             -else
                                 img.logo_dark(src='svg/logo_dark.svg')
                                 img.logo_white(src='svg/logo_white.svg')
 
                     .mb
-                        .callback_block(class= (factor || leasing ? 'clr_white' : 'clr_black'))
+                        .callback_block(class= (factor || leasing || account ? 'clr_white' : 'clr_black'))
                             .callback_phone 8 800 333 04 04
                             p
                                 span Звоните или 
-                                a.gl_link.callbakc_link.openCallBackForm(href='#' class= (factor || leasing ? 'clr_green' : 'clr_black')) закажите звонок
+                                a.gl_link.callbakc_link.openCallBackForm(href='#' class= (factor || leasing ? 'clr_green' : (account ? 'clr_white' : 'clr_black'))) закажите звонок
 
         .land_menu_holder.landMenu
             .section_inner

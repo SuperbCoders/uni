@@ -484,14 +484,32 @@ $arrSize : 32px;
 	}
 }
 
+@mixin respond-to-max-h($custom) {
+	@media only screen and (max-height : $custom - 1) {
+		@content;
+	}
+}
+
 @mixin respond-to-min($custom1) {
 	@media only screen and (min-width : $custom1) {
 		@content;
 	}
 }
 
+@mixin respond-to-min-h($custom1) {
+	@media only screen and (min-height : $custom1) {
+		@content;
+	}
+}
+
 @mixin respond-min-max($custom2, $custom3) {
 	@media only screen and (min-width : $custom2) and (max-width : $custom3) {
+		@content;
+	}
+}
+
+@mixin respond-min-min-h($custom2, $custom3) {
+	@media only screen and (min-width : $custom2) and (min-height : $custom3) {
 		@content;
 	}
 }
