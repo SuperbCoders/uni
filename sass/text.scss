@@ -119,11 +119,32 @@
   }
 }
 
+.article_v4 {
+  font: 20px/1.2 $HelveticaNeueCyrLight;
+
+  p {
+    margin-bottom: 14px;
+    max-width: 900px;
+    letter-spacing: .5px;
+  }
+
+  @include respond-to-min($resp_2) {
+    padding-top: 48px;
+    padding-bottom: 50px;
+    min-height: 510px;
+    font-size: 24px;
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
 .u_holder {
-  left: 50%;
+  right: 0;
   top: 0;
   bottom: 0;
-  width: 50%;
+  //width: 50%;
   //font: 1200px/1 $HelveticaNeueCyrLight;
   //margin-left: 495px;
   padding-bottom: 15px;
@@ -142,6 +163,11 @@
   position: absolute;
   top: 75px;
   left: 100px;
+  
+  svg {
+    margin-left: -90%;
+    max-height: 100vh;
+  }
 }
 
 .section_title {

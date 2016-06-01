@@ -12,6 +12,21 @@
       }
     }
   }
+
+  &.inline_mod {
+
+    @include respond-to-min($resp_1) {
+      display: inline-block;
+      vertical-align: top;
+
+      .form_row.f_cell_v1 .form_cell {
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .form_row {

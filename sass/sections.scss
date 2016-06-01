@@ -24,12 +24,6 @@
 
   &.section_bg1 {
     padding: 210px 0 20px;
-    //min-height: 1025px;
-    //background: url(../i/section_1.jpg) no-repeat 50%;
-    //-webkit-background-size: cover;
-    //-moz-background-size: cover;
-    //-o-background-size: cover;
-    //background-size: cover;
   }
 
   &.section_bg2 {
@@ -40,12 +34,6 @@
   &.section_bg3 {
     padding: 133px 0 1px;
     overflow: hidden;
-    //min-height: 780px;
-    //background: url(../i/section_2.jpg) no-repeat 50%;
-    //-webkit-background-size: cover;
-    //-moz-background-size: cover;
-    //-o-background-size: cover;
-    //background-size: cover;
   }
 
   &.section_bg4 {
@@ -64,12 +52,6 @@
 
   &.section_bg6 {
     padding: 200px 0 20px;
-    //min-height: 720px;
-    //background: url(../i/section_3.jpg) no-repeat 50%;
-    //-webkit-background-size: cover;
-    //-moz-background-size: cover;
-    //-o-background-size: cover;
-    //background-size: cover;
   }
 
   &.section_bg7 {
@@ -79,12 +61,6 @@
 
   &.section_bg8 {
     padding: 112px 0 20px;
-    //min-height: 447px;
-    //background: url(../i/section_4.jpg) no-repeat 50%;
-    //-webkit-background-size: cover;
-    //-moz-background-size: cover;
-    //-o-background-size: cover;
-    //background-size: cover;
 
     .order_form {
       padding-top: 52px;
@@ -137,6 +113,15 @@
 
     @include respond-to-min($resp_1) {
       padding: 210px 0 140px;
+    }
+  }
+
+  &.section_bg14_1 {
+    background: #fff;
+    padding: 40px 0 1px;
+
+    @include respond-to-min($resp_1) {
+      padding: 210px 0 1px;
     }
   }
 
@@ -198,6 +183,33 @@
 
     @include respond-to-min($resp_1) {
       padding-top: 90px;
+    }
+  }
+
+  &.section_bg20 {
+    background: #f5f5f5;
+    padding: 120px 0 35px;
+
+    @include respond-to-min($resp_1) {
+      padding-top: 210px;
+    }
+  }
+
+  &.section_bg21 {
+    background: #f1f3f4;
+    padding: 40px 0;
+
+    @include respond-to-min($resp_1) {
+      padding: 100px 0 80px;
+    }
+  }
+
+  &.section_bg22 {
+    background: #fff;
+    padding: 40px 0;
+
+    @include respond-to-min($resp_1) {
+      padding: 140px 0;
     }
   }
 }

@@ -159,6 +159,18 @@
   }
 }
 
+.blue_btn_bdr_v3 {
+  @include transition_all(background .3s);
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #2618ff;
+
+  &:hover {
+    color: #fff;
+    background: #2618ff;
+  }
+}
+
 .blue_btn {
   @include transition_all(background .3s);
   background: #00a9f1;
@@ -166,6 +178,16 @@
 
   &:hover {
     background: #007dde;
+  }
+}
+
+.blue_btn_v2 {
+  @include transition_all(background .3s);
+  background: #2618ff;
+  color: #fff;
+
+  &:hover {
+    background: #4e42ff;
   }
 }
 

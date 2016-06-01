@@ -380,8 +380,8 @@ html, body {
 }
 
 html {
-  overflow-y: scroll !important;
-  overflow-x: hidden !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 html.dialog_regular_open {
   overflow: hidden;
@@ -394,7 +394,6 @@ html.dialog_regular_open .header {
 body {
   font: 14px/1.2 "HelveticaNeue", sans-serif;
   color: #000;
-  overflow: visible !important;
 }
 
 .gl_link {
@@ -468,69 +467,16 @@ body {
 .section {
   overflow: hidden;
 }
-.section.full_h_section {
-  min-height: 0 !important;
-}
-@media only screen and (min-width: 1200px) {
-  .section.full_h_section {
-    height: 100vh;
-  }
-}
 .section.section_bg1 {
   padding: 210px 0 20px;
-}
-@media only screen and (max-height: 899px) {
-  .section.section_bg1 {
-    padding-top: 160px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section.section_bg1 {
-    padding-top: 140px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section.section_bg1 {
-    padding-top: 120px;
-  }
 }
 .section.section_bg2 {
   padding: 100px 0 128px;
   background: #00a9f1;
 }
-@media only screen and (max-height: 899px) {
-  .section.section_bg2 {
-    padding: 80px 0 20px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section.section_bg2 {
-    padding-top: 60px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section.section_bg2 {
-    padding-top: 40px;
-  }
-}
 .section.section_bg3 {
   padding: 133px 0 1px;
   overflow: hidden;
-}
-@media only screen and (max-height: 899px) {
-  .section.section_bg3 {
-    padding-top: 120px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section.section_bg3 {
-    padding-top: 100px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section.section_bg3 {
-    padding-top: 80px;
-  }
 }
 .section.section_bg4 {
   padding: 123px 0 35px;
@@ -541,78 +487,16 @@ body {
     padding-bottom: 135px;
   }
 }
-@media only screen and (max-height: 899px) {
-  .section.section_bg4 {
-    padding-top: 120px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section.section_bg4 {
-    padding-top: 100px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section.section_bg4 {
-    padding-top: 80px;
-  }
-}
 .section.section_bg5 {
   padding: 107px 0 77px;
   background: #fff;
 }
-@media only screen and (max-height: 899px) {
-  .section.section_bg5 {
-    padding-top: 90px;
-    padding-bottom: 50px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section.section_bg5 {
-    padding-top: 80px;
-    padding-bottom: 30px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section.section_bg5 {
-    padding-top: 70px;
-  }
-}
 .section.section_bg6 {
   padding: 200px 0 20px;
-}
-@media only screen and (max-height: 899px) {
-  .section.section_bg6 {
-    padding-top: 150px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section.section_bg6 {
-    padding-top: 100px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section.section_bg6 {
-    padding-top: 70px;
-  }
 }
 .section.section_bg7 {
   padding: 128px 0 68px;
   background: #00a9f1;
-}
-@media only screen and (max-height: 899px) {
-  .section.section_bg7 {
-    padding-top: 100px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section.section_bg7 {
-    padding-top: 90px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section.section_bg7 {
-    padding-top: 70px;
-  }
 }
 .section.section_bg8 {
   padding: 112px 0 20px;
@@ -1257,7 +1141,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .service_benefits {
-    margin: 50px -1% 35px -63px;
+    margin: 125px -1% 95px -63px;
   }
   .service_benefits li {
     float: left;
@@ -1280,21 +1164,6 @@ body {
   }
   .section_bg3 .service_benefits .benefit_item h3 {
     min-height: 0;
-  }
-}
-@media only screen and (min-width: 1200px) and (min-height: 700px) {
-  .service_benefits {
-    margin: 50px -1% 35px -63px;
-  }
-}
-@media only screen and (min-width: 1200px) and (min-height: 800px) {
-  .service_benefits {
-    margin: 65px -1% 45px -63px;
-  }
-}
-@media only screen and (min-width: 1200px) and (min-height: 900px) {
-  .service_benefits {
-    margin: 125px -1% 95px -63px;
   }
 }
 
@@ -1435,47 +1304,6 @@ body {
     padding-top: 10px;
   }
 }
-@media only screen and (max-height: 899px) {
-  .guarantee_form .result_block_inner {
-    min-height: 0;
-  }
-  .guarantee_form .calc_block {
-    padding-top: 0;
-  }
-  .guarantee_form .result_block_inner {
-    padding: 20px;
-  }
-  .guarantee_form .result_b_title {
-    display: block;
-    max-width: none;
-  }
-  .guarantee_form .result_b_val {
-    clear: both;
-    float: right;
-  }
-  .guarantee_form .result_b_label {
-    float: left;
-  }
-  .guarantee_form .result_b_label,
-  .guarantee_form .result_b_val {
-    margin: 0 0 20px;
-    padding: 0;
-    border: none;
-    font-size: 30px;
-    letter-spacing: 0;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .guarantee_form .result_b_label,
-  .guarantee_form .result_b_val {
-    font-size: 24px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .guarantee_form .result_b_title {
-    margin-bottom: 20px;
-  }
-}
 
 .toddler_holder {
   position: relative;
@@ -1521,11 +1349,6 @@ body {
 }
 .toddler_holder.toddler_v1 .noUi-handle:after, .toddler_holder.toddler_v1 .noUi-handle:before {
   display: none;
-}
-@media only screen and (max-height: 899px) {
-  .toddler_holder.toddler_v1 {
-    margin-bottom: 40px;
-  }
 }
 
 .doc_list {
@@ -1633,24 +1456,6 @@ body {
     min-height: 250px;
   }
 }
-@media only screen and (min-width: 1200px) and (min-height: 900px) {
-  .company_features {
-    margin: 75px 0 70px -38px;
-  }
-}
-@media only screen and (min-width: 1200px) and (min-height: 800px) {
-  .company_features {
-    margin: 55px 0 50px -38px;
-  }
-  .company_features li {
-    margin-bottom: 10px;
-  }
-}
-@media only screen and (min-width: 1200px) and (min-height: 700px) {
-  .company_features {
-    margin: 35px 0 30px -38px;
-  }
-}
 
 .feature_item {
   margin-bottom: 80px;
@@ -1719,21 +1524,6 @@ body {
   margin: 88px 0 72px;
   padding: 0 25px;
   text-align: center;
-}
-@media only screen and (max-height: 899px) {
-  .review_slider {
-    margin: 60px 0;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .review_slider {
-    margin: 50px 0;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .review_slider {
-    margin: 40px 0;
-  }
 }
 
 .slider_btn_v1 .slick-arrow {
@@ -1841,21 +1631,6 @@ body {
 }
 .slick-slide .review_item p:after, .slick-slide .review_item p:before {
   display: none;
-}
-@media only screen and (min-width: 1200px) and (min-height: 900px) {
-  .review_item {
-    font-size: 34px;
-  }
-}
-@media only screen and (min-width: 1200px) and (min-height: 800px) {
-  .review_item {
-    font-size: 30px;
-  }
-}
-@media only screen and (min-width: 1200px) and (min-height: 700px) {
-  .review_item {
-    font-size: 26px;
-  }
 }
 
 .author_item {
@@ -3212,35 +2987,21 @@ body {
 }
 .u_block svg {
   margin-left: -90%;
+  max-height: 100vh;
 }
 
 .section_title {
   font: 60px/1.2 "HelveticaNeueCyr-Bold", sans-serif;
   margin-bottom: 10px;
 }
-@media only screen and (max-width: 639px) {
-  .section_title {
-    text-align: center;
-  }
-}
-@media only screen and (max-height: 899px) {
-  .section_title {
-    font-size: 55px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section_title {
-    font-size: 50px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section_title {
-    font-size: 45px;
-  }
-}
 @media only screen and (max-width: 1199px) {
   .section_title {
     font-size: 36px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .section_title {
+    text-align: center;
   }
 }
 
@@ -3249,21 +3010,6 @@ body {
   line-height: 1.2;
   margin-bottom: 15px;
   letter-spacing: -1.4px;
-}
-@media only screen and (max-height: 899px) {
-  .section_sub_title {
-    font-size: 24px;
-  }
-}
-@media only screen and (max-height: 799px) {
-  .section_sub_title {
-    font-size: 22px;
-  }
-}
-@media only screen and (max-height: 699px) {
-  .section_sub_title {
-    font-size: 20px;
-  }
 }
 
 .text_center {
@@ -3611,12 +3357,6 @@ body {
 
 @media only screen and (max-width: 1199px) {
   .dt_only {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-height: 799px) {
-  .high_only {
     display: none !important;
   }
 }

@@ -2,10 +2,6 @@ $gl_green: #2dcda1;
 $gl_blue: #00b1ff;
 $gl_blue_v1: #24a6df;
 
-$resp_h_1: 900px;
-$resp_h_2: 800px;
-$resp_h_3: 700px;
-
 $resp_1: 1200px;
 $resp_2: 960px;
 $resp_3: 640px;
@@ -18,8 +14,8 @@ html, body {
 }
 
 html {
-  overflow-y: scroll !important;
-  overflow-x: hidden !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   &.dialog_regular_open {
     overflow: hidden;
@@ -34,7 +30,6 @@ html {
 body {
   font: 14px/1.2 $HelveticaNeue;
   color: $default_t_color;
-  overflow: visible !important;
 }
 
 .gl_link {
@@ -117,7 +112,7 @@ body {
   }
 
   @include respond-to-min($resp_1) {
-    margin: 50px -1% 35px -63px;
+    margin: 125px -1% 95px -63px;
 
     li {
       float: left;
@@ -153,19 +148,6 @@ body {
       }
     }
   }
-
-  @include respond-min-min-h($resp_1, $resp_h_3) {
-    margin: 50px -1% 35px -63px;
-  }
-
-  @include respond-min-min-h($resp_1, $resp_h_2) {
-    margin: 65px -1% 45px -63px;
-  }
-
-  @include respond-min-min-h($resp_1, $resp_h_1) {
-    margin: 125px -1% 95px -63px;
-  }
-
 }
 
 .benefit_item {
@@ -323,59 +305,6 @@ body {
       padding-top: 10px;
     }
   }
-
-  @include respond-to-max-h($resp_h_1) {
-
-    .result_block_inner {
-      min-height: 0;
-    }
-
-    .calc_block {
-      padding-top: 0;
-    }
-
-    .result_block_inner {
-      padding: 20px;
-    }
-
-    .result_b_title {
-      display: block;
-      max-width: none;
-    }
-
-    .result_b_val {
-      clear: both;
-      float: right;
-    }
-
-    .result_b_label {
-      float: left;
-    }
-
-    .result_b_label,
-    .result_b_val {
-      margin: 0 0 20px;
-      padding: 0;
-      border: none;
-      font-size: 30px;
-      letter-spacing: 0;
-    }
-  }
-
-  @include respond-to-max-h($resp_h_2) {
-
-    .result_b_label,
-    .result_b_val {
-      font-size: 24px;
-    }
-  }
-
-  @include respond-to-max-h($resp_h_3) {
-
-    .result_b_title {
-      margin-bottom: 20px;
-    }
-  }
 }
 
 .toddler_holder {
@@ -429,10 +358,6 @@ body {
       &:before {
         display: none;
       }
-    }
-
-    @include respond-to-max-h($resp_h_1) {
-      margin-bottom: 40px;
     }
   }
 }
@@ -559,22 +484,6 @@ body {
       }
     }
   }
-
-  @include respond-min-min-h($resp_1, $resp_h_1) {
-    margin: 75px 0 70px -38px;
-  }
-
-  @include respond-min-min-h($resp_1, $resp_h_2) {
-    margin: 55px 0 50px -38px;
-
-    li {
-      margin-bottom: 10px;
-    }
-  }
-
-  @include respond-min-min-h($resp_1, $resp_h_3) {
-    margin: 35px 0 30px -38px;
-  }
 }
 
 .feature_item {
@@ -647,18 +556,6 @@ body {
   margin: 88px 0 72px;
   padding: 0 25px;
   text-align: center;
-
-  @include respond-to-max-h($resp_h_1) {
-    margin: 60px 0;
-  }
-
-  @include respond-to-max-h($resp_h_2) {
-    margin: 50px 0;
-  }
-
-  @include respond-to-max-h($resp_h_3) {
-    margin: 40px 0;
-  }
 }
 
 .slider_btn_v1 {
@@ -803,18 +700,6 @@ body {
         display: none;
       }
     }
-  }
-
-  @include respond-min-min-h($resp_1, $resp_h_1) {
-    font-size: 34px;
-  }
-
-  @include respond-min-min-h($resp_1, $resp_h_2) {
-    font-size: 30px;
-  }
-
-  @include respond-min-min-h($resp_1, $resp_h_3) {
-    font-size: 26px;
   }
 }
 
@@ -1426,12 +1311,6 @@ body {
 
 .dt_only {
   @include respond-to-max($resp_1) {
-    display: none !important;
-  }
-}
-
-.high_only {
-  @include respond-to-max-h($resp_h_2) {
     display: none !important;
   }
 }
